@@ -8,7 +8,6 @@ class Degree {
     public:
     void MajorChoice(int choice) {
         if (choice == 1) {
-            cout << "\n";
             cout << "Classes for Computer Science:\n";
             cout << "COSC 1436 | Programming Fundamentals I\n";
             cout << "PHYS 2325 | University Physics I\n";
@@ -17,7 +16,6 @@ class Degree {
             cout << "MATH 2318 | Linear Algebra\n";
         }
         else if (choice == 2) {
-            cout << "\n";
             cout << "Classes for Engineering:\n";
             cout << "ENGR 1301 | Introduction to Engineering\n";
             cout << "MATH 2415 | Calculus III\n";
@@ -26,7 +24,6 @@ class Degree {
             cout << "ENGL 1302 | Composition II\n";
         }
         else if (choice == 3) {
-            cout << "\n";
             cout << "Classes for Mathematics:\n";
             cout << "MATH 2414 | Calculus I\n";
             cout << "MATH 1342 | Elementary Statistical Methods\n";
@@ -35,7 +32,6 @@ class Degree {
             cout << "MATH 2310 | Differential Equations\n";
         }
         else if (choice == 4) {
-            cout << "\n";
             cout << "Classes for Criminal Justice:\n";
             cout << "CRIJ 1301 | Introduction to Criminal Justice\n";
             cout << "CRIJ 1310 | Fundamentals of Criminal Law\n";
@@ -44,7 +40,6 @@ class Degree {
             cout << "SPCH 1315 | Public Speaking\n";
         }
         else if (choice == 5) {
-            cout << "\n";
             cout << "Classes for Business:\n";
             cout << "BUSI 1301 | Business Principles\n";
             cout << "ECON 2301 | Principles of Macroeconomics\n";
@@ -52,6 +47,22 @@ class Degree {
             cout << "PHIL 1301 | Introduction to Philosophy\n";
             cout << "MATH 1314 | College Algebra\n";
         }
+    }
+};
+
+class Schedule {
+    public:
+    void classSchedule() {
+        cout << "COSC 1436 -> Programming Fundamentals I (MW from 10:00 am - 11:50 am)\n";
+        cout << "COSC 1436 -> Programming Fundamentals I (TR from 8:00 am - 9:50 am)\n";
+        cout << "PHYS 2325 -> University Physics I (MW from 11:30 am - 1:00 pm)\n";
+        cout << "PHYS 2325 -> University Physics I (TR from 8:00 am - 9:30 am)\n";
+        cout << "MATH 2414 -> Calculus II (MW from 1:00 pm - 2:50 pm\n";
+        cout << "MATH 2414 -> Calculus II (TR from 12:00 pm - 1:50 pm)\n";
+        cout << "COSC 2436 -> Programming Fundamentals III (MW from 10:00 am - 11:50 am)\n";
+        cout << "COSC 2436 -> Programming Fundamentals III (TR from 1:00 pm - 2:50 pm)\n";
+        cout << "MATH 2318 -> Linear Algebra (MW from 11:10 am - 1:00 pm)\n";
+        cout << "MATH 2318 -> Linear Algebra (TR from 10:10 am - 12:00 pm)\n";
     }
 };
 
@@ -64,14 +75,15 @@ class Student {
 int main() {
     Degree degree;
     Student student;
+    Schedule schedule;
     int dChoice;
+    int cSchedule;
 
     system("clear");
-    cout << "\n";
     cout << "Menu:\n";
     cout << "Student Information - 1\n";
     cout << "Major Degree - 2\n";
-    cout << "Courses - 3\n";
+    cout << "Course Schedule - 3\n";
     cout << "Quit - 4\n";
     cout << "Choose an option: ";
     int userChoice;
@@ -82,7 +94,6 @@ int main() {
         cout << "1";
     }
     if (userChoice == 2) {
-        cout << "\n";
         cout << "Computer Science - 1\n";
         cout << "Engineering - 2\n";
         cout << "Mathematics - 3\n";
@@ -94,7 +105,8 @@ int main() {
         degree.MajorChoice(dChoice);
     }
     if (userChoice == 3) {
-        cout << "3";
+        system("clear");
+        schedule.classSchedule();
     }
     if (userChoice == 4) {
         cout << "Goodbye!";
