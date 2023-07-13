@@ -52,17 +52,68 @@ class Degree {
 
 class Schedule {
     public:
-    void classSchedule() {
-        cout << "COSC 1436 -> Programming Fundamentals I (MW from 10:00 am - 11:50 am)\n";
-        cout << "COSC 1436 -> Programming Fundamentals I (TR from 8:00 am - 9:50 am)\n";
-        cout << "PHYS 2325 -> University Physics I (MW from 11:30 am - 1:00 pm)\n";
-        cout << "PHYS 2325 -> University Physics I (TR from 8:00 am - 9:30 am)\n";
-        cout << "MATH 2414 -> Calculus II (MW from 1:00 pm - 2:50 pm\n";
-        cout << "MATH 2414 -> Calculus II (TR from 12:00 pm - 1:50 pm)\n";
-        cout << "COSC 2436 -> Programming Fundamentals III (MW from 10:00 am - 11:50 am)\n";
-        cout << "COSC 2436 -> Programming Fundamentals III (TR from 1:00 pm - 2:50 pm)\n";
-        cout << "MATH 2318 -> Linear Algebra (MW from 11:10 am - 1:00 pm)\n";
-        cout << "MATH 2318 -> Linear Algebra (TR from 10:10 am - 12:00 pm)\n";
+    void classSchedule(int sChoice) {
+        if (sChoice == 1) {
+            cout << "COSC 1436 -> Programming Fundamentals I (MW from 10:00 am - 11:50 am)\n";
+            cout << "COSC 1436 -> Programming Fundamentals I (TR from 8:00 am - 9:50 am)\n";
+            cout << "PHYS 2325 -> University Physics I (MW from 11:30 am - 1:00 pm)\n";
+            cout << "PHYS 2325 -> University Physics I (TR from 8:00 am - 9:30 am)\n";
+            cout << "MATH 2414 -> Calculus II (MW from 1:00 pm - 2:50 pm)\n";
+            cout << "MATH 2414 -> Calculus II (TR from 12:00 pm - 1:50 pm)\n";
+            cout << "COSC 2436 -> Programming Fundamentals III (MW from 10:00 am - 11:50 am)\n";
+            cout << "COSC 2436 -> Programming Fundamentals III (TR from 1:00 pm - 2:50 pm)\n";
+            cout << "MATH 2318 -> Linear Algebra (MW from 11:10 am - 1:00 pm)\n";
+            cout << "MATH 2318 -> Linear Algebra (TR from 10:10 am - 12:00 pm)\n";
+        }
+        if (sChoice == 2) {
+            cout << "ENGR 1301 -> Introduction to Engineering (MW from 11:10 am - 1:00 pm)\n";
+            cout << "ENGR 1301 -> Introduction to Engineering (TR from 12:00 pm - 1:50 pm)\n";
+            cout << "MATH 2415 -> Calculus III(MW from 11:30 am - 1:00 pm)\n";
+            cout << "MATH 2415 -> Calculus III (TR from 1:00 pm - 2:50 pm)\n";
+            cout << "ENGR 2304 -> Programming for Engineers (MW from 11:30 am - 1:00 pm)\n";
+            cout << "ENGR 2304 -> Programming for Engineers (TR from 8:00 am - 9:50 am)\n";
+            cout << "PHYS 2326 -> University Physics II(MW from 11:30 am - 1:00 pm)\n";
+            cout << "PHYS 2326 -> University Physics II (TR from 1:00 pm - 2:50 pm)\n";
+            cout << "ENGL 1302 -> Composition II (MW from 11:10 am - 1:00 pm)\n";
+            cout << "ENGL 1302 -> Composition II (TR from 12:00 pm - 1:50 pm)\n";
+        }
+        if (sChoice == 3) {
+            cout << "MATH 2414 -> Calculus I (MW from 1:00 pm - 2:50 pm)\n";
+            cout << "MATH 2414 -> Calculus I (TR from 8:00 am - 9:30 am)\n";
+            cout << "MATH 1342 -> Elementary Statistical Methods (MW from 11:30 am - 1:00 pm)\n";
+            cout << "MATH 1342 -> Elementary Statistical Methods (TR from 12:00 pm - 1:50 pm)\n";
+            cout << "CHEM 1311 -> General Chemistry I (MW from 10:00 am - 11:50 am)\n";
+            cout << "CHEM 1311 -> General Chemistry I (TR from 12:00 pm - 1:50 pm)\n";
+            cout << "DRAM 2366 -> Film Appreciation (MW from 1:00 pm - 2:50 pm)\n";
+            cout << "DRAM 2366 -> Film Appreciation (TR from 8:00 am - 9:30 am)\n";
+            cout << "MATH 2310 -> Differential Equations (MW from 10:00 am - 11:50 am)\n";
+            cout << "MATH 2310 -> Differential Equations (TR from 1:00 pm - 2:50 pm)\n";
+        }
+        if (sChoice == 4) {
+            cout << "CRIJ 1301 -> Introduction to Criminal Justice (MW from 10:00 am - 11:50 am)\n";
+            cout << "CRIJ 1301 -> Introduction to Criminal Justice (TR from 10:10 am - 12:00 pm)\n";
+            cout << "CRIJ 1310 -> Fundamentals of Criminal Law (MW from 1:00 pm - 2:50 pm)\n";
+            cout << "CRIJ 1310 -> Fundamentals of Criminal Law (TR from 1:00 pm - 2:50 pm)\n";
+            cout << "CRIJ 2314 -> Criminal Investigation (MW from 10:00 am - 11:50 am)\n";
+            cout << "CRIJ 2314 -> Criminal Investigation (TR from 1:00 pm - 2:50 pm)\n";
+            cout << "ENGL 1301 -> Composition I (MW from 11:30 am - 1:00 pm)\n";
+            cout << "ENGL 1301 -> Composition I (TR from 8:00 am - 9:30 am)\n";
+            cout << "SPCH 1315 -> Public Speaking (MW from 1:00 pm - 2:50 pm)\n";
+            cout << "SPCH 1315 -> Public Speaking (TR from 10:10 am - 12:00 pm)\n";
+        }
+        if (sChoice == 5) {
+            cout << "BUSI 1301 -> Business Principles (MW from 10:00 am - 11:50 am)\n";
+            cout << "BUSI 1301 -> Business Principles (TR from 1:00 pm - 2:50 pm)\n";
+            cout << "ECON 2301 -> Principles of Macroeconomics (MW from 11:00 am - 12:50 am)\n";
+            cout << "ECON 2301 -> Principles of Macroeconomics (TR from 10:10 am - 12:00 pm)\n";
+            cout << "ECON 2302 -> Principles of Microeconomics (MW from 1:00 am - 2:50 am)\n";
+            cout << "ECON 2302 -> Principles of Microeconomics (TR from 10:10 am - 12:00 pm)\n";
+            cout << "PHIL 1301 -> Introduction to Philosophy (MW from 10:00 am - 11:50 am)\n";
+            cout << "PHIL 1301 -> Introduction to Philosophy (TR from 1:00 pm - 2:50 pm)\n";
+            cout << "MATH 1314 -> College Algebra (MW from 8:00 am - 9:30 am)\n";
+            cout << "MATH 1314 -> College Algebra (TR from 8:00 am - 9:30 am)\n";
+        }
+        
     }
 };
 
@@ -105,8 +156,15 @@ int main() {
         degree.MajorChoice(dChoice);
     }
     if (userChoice == 3) {
+        cout << "Computer Science - 1\n";
+        cout << "Engineering - 2\n";
+        cout << "Mathematics - 3\n";
+        cout << "Criminal Justice - 4\n";
+        cout << "Business - 5\n";
+        cout << "Select major to view semester schedule for: ";
+        cin >> cSchedule;
         system("clear");
-        schedule.classSchedule();
+        schedule.classSchedule(cSchedule);
     }
     if (userChoice == 4) {
         cout << "Goodbye!";
