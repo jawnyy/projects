@@ -123,10 +123,12 @@ class Student {
     void enterStudents() {
         stuFile.open("StudentInfo.txt", ios::app);
         if (stuFile.is_open()) {
-            cout << "Enter information in this format: FirstName LastName, major\n";
+            cout << "Enter information in this format: \"FirstName LastName, Major\"\n";
             string info;
+            cin.ignore();
             getline(cin, info);
-            stuFile << info;
+            stuFile << "\n- " << info;
+            cout << "Information successfuly added!\n";
             stuFile.close();
         }
     }
@@ -154,7 +156,7 @@ int main() {
     cout << "Menu:\n";
     cout << "Student Information - 1\n";
     cout << "Major Degree - 2\n";
-    cout << "Course Schedule - 3\n";
+    cout << "Semester Availability - 3\n";
     cout << "Quit - 4\n";
     cout << "Choose an option: ";
     int userChoice;
@@ -192,7 +194,7 @@ int main() {
         cout << "Mathematics - 3\n";
         cout << "Criminal Justice - 4\n";
         cout << "Business - 5\n";
-        cout << "Select major to view semester schedule for: ";
+        cout << "Select major to view: ";
         cin >> cSchedule;
         system("clear");
         schedule.classSchedule(cSchedule);
