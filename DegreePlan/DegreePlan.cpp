@@ -119,7 +119,27 @@ class Schedule {
 
 class Student {
     public:
-    //not really sure just make so student info can be obtained
+    fstream stuFile;
+    void enterStudents() {
+        stuFile.open("StudentInfo.txt", ios::app);
+        if (stuFile.is_open()) {
+            cout << "Enter information in this format: FirstName LastName, major\n";
+            string info;
+            getline(cin, info);
+            stuFile << info;
+            stuFile.close();
+        }
+    }
+    void displayStudents() {
+        stuFile.open("StudentInfo.txt", ios::in);
+        if (stuFile.is_open()) {
+            string line;
+            while(getline(stuFile, line)) {
+                cout << line << endl;
+            }
+            stuFile.close();
+        }
+    }
 };
 
 
@@ -141,8 +161,19 @@ int main() {
     cin >> userChoice;
     system("clear");
 
-    if (userChoice == 1){
-        cout << "1";
+    if (userChoice == 1) {
+        cout << "Enter student information - 1\n";
+        cout << "View student information - 2\n";
+        cout << "Enter 1 or 2: ";
+        int stuChoice;
+        cin >> stuChoice;
+        system("clear");
+        if (stuChoice == 1) {
+            student.enterStudents();
+        }
+        else {
+            student.displayStudents();
+        }
     }
     if (userChoice == 2) {
         cout << "Computer Science - 1\n";
@@ -167,7 +198,7 @@ int main() {
         schedule.classSchedule(cSchedule);
     }
     if (userChoice == 4) {
-        cout << "Goodbye!";
+        cout << "Goodbye!\n";
     }
 
     cout << "\n";
